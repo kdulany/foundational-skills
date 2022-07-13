@@ -4,7 +4,7 @@
 
 # Set from Session or...
 
-setwd("C:/Users/User/Documents/RProj22/foundation_labs_2022/foundation_lab_1")
+
 
 
 
@@ -35,7 +35,7 @@ library(readxl)
 
 ccss_tweets <- read_excel("data/csss_tweets.xlsx")
 view(ccss_tweets)
-head(csss_tweets, n = 5)
+head(ccss_tweets, n = 5)
 tail(ccss_tweets, n = 5)
 
 ###### Excel Function ######## 
@@ -52,7 +52,7 @@ view(csss_tweets)
 ####### From Path ##########
 ############################
 
-sci_ol_classes <- read_csv("C:/Users/User/Documents/RProj22/foundation_labs_2022/foundation_lab_1/data/sci-online-classes.csv")
+sci_ol_classes <- read_csv("/Users/kristadulany/Documents/GitHub/foundational-skills/foundation_lab_1/data/sci-online-classes.csv")
 
 sci_ol_classes
 

@@ -528,7 +528,7 @@ To help us import our data, we'll be using two packages:
 library(tidyverse)
 library(here)
 #load with read_csv package
-time_spent <- read_csv("~/RProj22/foundation_labs_2022/foundation_lab_2/data/log-data.csv")#<<
+time_spent <- read_csv("~/Documents/GitHub/foundational-skills/foundation_lab_2/data/log-data.csv")#<<
 
 #load with here package
 time_spent <- read_csv(here(

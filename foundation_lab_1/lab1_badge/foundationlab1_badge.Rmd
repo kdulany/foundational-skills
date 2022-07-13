@@ -14,23 +14,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The final activity for each learning lab provides space to work with data and to reflect on how the concepts and techniques introduced in each lab might apply to your own research.
 
-To earn a badge for each lab, you are required to respond to a set of prompts for two parts: 
+To earn a badge for each lab, you are required to respond to a set of prompts for two parts:
 
 -   In Part I, you will reflect on your understanding of key concepts and begin to think about potential next steps for your own study.
 
 -   In Part II, you will create a simple data product in R that demonstrates your ability to apply a data analysis technique introduced in this learning lab.
 
 ### Part I: Reflect and Plan
+
 Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#articles)), [Google Scholar](https://scholar.google.com/) or search engine to locate a research article, presentation, or resource that applies learning analytics analysis to an educational context or topic of interest. More specifically, **locate a study that makes use of one of the data structures we learned today.** You are also welcome to select one of your research papers.
 
 1.  Provide an APA citation for your selected study.
 
-    -   
+    -   Campos, F. C., Ahn, J., DiGiacomo, D. K., Nguyen, H., & Hays, M. (2021). Making sense of sensemaking: Understanding how K--12 teachers and coaches react to visual analytics. Journal of Learning Analytics, 8(3), 60--80. <https://doi.org/10.18608/jla.2021.7113>
 
 2.  What types of data are associated with LA ?
 
     -   
-
 
 3.  What type of data structures are analyzed in the educational context?
 
@@ -40,7 +40,7 @@ Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#art
 
     -   
 
-5.  Finally, how do these processes compare with what teachers and educational organizations already do to support and assess student learning? 
+5.  Finally, how do these processes compare with what teachers and educational organizations already do to support and assess student learning?
 
     -   
 
@@ -58,16 +58,13 @@ Draft a research question of guided by techniques and data sources that you are 
 
     -   
 
-4.  How, if at all, will your article touch upon the application(s) of LA to “understand and improve learning and the contexts in which learning occurs?”
+4.  How, if at all, will your article touch upon the application(s) of LA to "understand and improve learning and the contexts in which learning occurs?"
 
     -   
 
-
-
 ### Part II: Data Product
 
-After you finish the script file for [lab1_badge](https://github.com/laser-institute/foundational-skills/tree/master/foundation_lab_1/lab1_badge) add the code fo reach problem into the correct code chunks below. # Making sure not to change the code chunk name.
-
+After you finish the script file for [lab1_badge](https://github.com/laser-institute/foundational-skills/tree/master/foundation_lab_1/lab1_badge) add the code fo reach problem into the correct code chunks below. \# Making sure not to change the code chunk name.
 
 ```{r, problem_1}
 # YOUR FINAL CODE HERE
@@ -75,13 +72,11 @@ After you finish the script file for [lab1_badge](https://github.com/laser-insti
 
 ```
 
-
 ```{r, problem_2}
 # YOUR FINAL CODE HERE
 
 
 ```
-
 
 ```{r, problem_3}
 # YOUR FINAL CODE HERE
@@ -89,15 +84,11 @@ After you finish the script file for [lab1_badge](https://github.com/laser-insti
 
 ```
 
-
-
 ```{r, problem_4}
 # YOUR FINAL CODE HERE
 
 
 ```
-
-
 
 ```{r, problem_5}
 # YOUR FINAL CODE HERE
@@ -111,13 +102,12 @@ Congratulations, you've completed your Data Sources Badge!
 
 *Complete the following steps to submit your work for review by:*
 
-1. Change the name of the author: in the [YAML header](https://monashdatafluency.github.io/r-rep-res/yaml-header.html) at the very top of this document to your name. As noted in [Reproducible Research in R](https://monashdatafluency.github.io/r-rep-res/index.html), The YAML header controls the style and feel for knitted document but doesn’t actually display in the final output.
+1.  Change the name of the author: in the [YAML header](https://monashdatafluency.github.io/r-rep-res/yaml-header.html) at the very top of this document to your name. As noted in [Reproducible Research in R](https://monashdatafluency.github.io/r-rep-res/index.html), The YAML header controls the style and feel for knitted document but doesn't actually display in the final output.
 
-2. Click the yarn icon above to “knit” your data product to a [HTML](https://bookdown.org/yihui/rmarkdown/html-document.html) file that will be saved in your R Project folder.
+2.  Click the yarn icon above to "knit" your data product to a [HTML](https://bookdown.org/yihui/rmarkdown/html-document.html) file that will be saved in your R Project folder.
 
-3. Commit your changes in GitHub Desktop and push them to your online GitHub repository.
+3.  Commit your changes in GitHub Desktop and push them to your online GitHub repository.
 
-4. Publish your HTML page the web using one of the following [publishing methods](https://rpubs.com/cathydatascience/518692):
-Publish on [RPubs](https://rpubs.com/) by clicking the “Publish” button located in the Viewer Pane when you knit your document. Note, you will need to quickly create a RPubs account. Publishing on GitHub using either [GitHub Pages](https://pages.github.com/) or the [HTML previewer](http://htmlpreview.github.io/).
+4.  Publish your HTML page the web using one of the following [publishing methods](https://rpubs.com/cathydatascience/518692): Publish on [RPubs](https://rpubs.com/) by clicking the "Publish" button located in the Viewer Pane when you knit your document. Note, you will need to quickly create a RPubs account. Publishing on GitHub using either [GitHub Pages](https://pages.github.com/) or the [HTML previewer](http://htmlpreview.github.io/).
 
-5. Post a new discussion on GitHub to our [Foundations Badges forum](https://github.com/orgs/laser-institute/teams/foundations/discussions/2). In your post, include a link to your published web page and `write` a short reflection highlighting one thing you learned from this lab and one thing you’d like to explore further.
+5.  Post a new discussion on GitHub to our [Foundations Badges forum](https://github.com/orgs/laser-institute/teams/foundations/discussions/2). In your post, include a link to your published web page and `write` a short reflection highlighting one thing you learned from this lab and one thing you'd like to explore further.
