@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization - badge"
 subtitle: "LASER Institute Foundation Learning Lab 3"
-author: ""
+author: "Krista Dulany"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -80,7 +80,26 @@ Exercise 1:
 
 
 ```{r, data-viz1}
-# YOUR FINAL CODE HERE
+library(tidyverse)
+library(here)
+
+sci_classes <- read_csv("data/sci-online-classes.csv")
+head(sci_classes)
+
+sci_classes |> 
+  select(c('subject', 'Gender', 'percentage_earned', 'TimeSpent_hours')) |>
+  filter(subject == "OcnA" | subject == "PhysA") |>
+  skim()
+
+
+ggplot(sci_classes, 
+       aes(x = percentage_earned, 
+           y = Gender,
+           color = Gender)) +
+  #layer 2: +  geom function type
+  geom_point() +
+  #layer 4: add lables
+  labs(title="How Percentage Earned is Related to Gender in the Course", x="Proportion of Points Earned", y = "Gender")
 ```
 
 
@@ -97,6 +116,7 @@ Exercise 2:
 
 ```{r, data-viz2}
 # YOUR FINAL CODE HERE
+
 ```
 
 ### Knit & Submit

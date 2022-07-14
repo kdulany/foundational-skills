@@ -9,8 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Krista Dulany" />
 
-<meta name="date" content="2022-07-10" />
+<meta name="date" content="2022-07-14" />
 
 <title>LA Workflow - Badge</title>
 
@@ -364,8 +365,8 @@ pre code {
 
 <h1 class="title toc-ignore">LA Workflow - Badge</h1>
 <h3 class="subtitle">LASER Institute Foundation Learning Lab 2</h3>
-<h4 class="author"></h4>
-<h4 class="date">2022-07-10</h4>
+<h4 class="author">Krista Dulany</h4>
+<h4 class="date">2022-07-14</h4>
 
 </div>
 
@@ -395,27 +396,44 @@ welcome to select one of your research papers.</p>
 <ol style="list-style-type: decimal">
 <li><p>Provide an APA citation for your selected study.</p>
 <ul>
-<li></li>
+<li>Gray, G., Schalk, A., Rooney, P., &amp; Lang, C. (2021). A
+Stakeholder Informed Professional Development Framework to Support
+Engagement with Learning Analytics. <em>LAK21: 11th International
+Learning Analytics and Knowledge Conference</em>. <a href="https://doi.org/10.1145/3448139.3448162" class="uri">https://doi.org/10.1145/3448139.3448162</a></li>
 </ul></li>
 <li><p>What educational issue, “problem of practice,” and/or questions
 were addressed?</p>
 <ul>
-<li></li>
+<li>What are the constituents for a continual professional development
+framework based on staff and student needs?</li>
 </ul></li>
 <li><p>Briefly describe any steps of the data-intensive research
 workflow that detailed in your article or presentation.</p>
 <ul>
-<li></li>
+<li>One of the referenced studies developed a 4 step workflow consisting
+of the following steps: Data, Process, Knowledge, Actions (Price-Dennis
+and Lang)</li>
+<li>Awareness, reflection, sense-making, impact (Verbert, Duval, Klerkx,
+Govaerts and Santos)</li>
+<li>Sensemaking and pedagogical response Wise and Jung</li>
 </ul></li>
 <li><p>What were the key findings or conclusions? What value, if any,
 might education practitioners find in these results?</p>
 <ul>
-<li></li>
+<li>They wanted to study ways needed to get students and teachers to
+interact with LA through designing professional development. They saw
+that staff wanted training on legal issues, ethical issues, using data,
+and training modes. Students wanted trainig to understand information
+and their rights. They also wanted to inform teachers with feedback and
+had concerns with misinterpretation of data. They created a PD design
+framework consisting of knowing, using and practicing, and taking
+action.</li>
 </ul></li>
 <li><p>Finally, how, if at at, were educators in your self-selected
 article involved prior to wrangling and analysis?</p>
 <ul>
-<li></li>
+<li>Educators and students provided study data through interviews and
+completed surveys.</li>
 </ul></li>
 </ol>
 <p>Draft a new research question of guided by the the phases of the
@@ -425,15 +443,28 @@ questions.</p>
 <li><p>What educational issue, “problem of practice,” and/or questions
 is addressed??</p>
 <ul>
-<li></li>
+<li>How to increase understanding and engagement with learning analytics
+data by using learning analytics</li>
 </ul></li>
 <li><p>Briefly describe any steps of the data-intensive research
-workflow that can be detailed in your article or presentation.</p></li>
+workflow that can be detailed in your article or presentation.</p>
+<ul>
+<li>Prepare – collect interview and survey data</li>
+<li>Wrangle – organize data</li>
+<li>Explore – thematic coding, subcategory coding, focus on training and
+PD requirements</li>
+<li>Model – identify themes and present in order of frequency of
+occurrence</li>
+<li>Communicate – tables and figures with survey results paired with
+explanatory narrative</li>
+</ul></li>
 <li><p>How, if at all, will your article touch upon the application(s)
 of LA to “understand and improve learning and the contexts in which
 learning occurs?”</p>
 <ul>
-<li></li>
+<li>The article’s focus is on improving learning and learning contexts
+for both understanding learning analytics and how to design a study
+for</li>
 </ul></li>
 </ol>
 </div>
@@ -477,20 +508,68 @@ and <em>save</em> as a new <code>object</code> called
 <code>sci-classes</code>. Then <em>inspect</em> your data using a
 <code>function</code> of your choice.</li>
 </ol>
-<pre class="r"><code># Type your code here</code></pre>
+<pre class="r"><code># Type your code here
+library(readr)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.3.6     ✔ dplyr   1.0.9
+## ✔ tibble  3.1.7     ✔ stringr 1.4.0
+## ✔ tidyr   1.2.0     ✔ forcats 0.5.1
+## ✔ purrr   0.3.4</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>sci_online_classes &lt;- read_csv(&quot;data/sci-online-classes.csv&quot;)</code></pre>
+<pre><code>## Rows: 603 Columns: 30</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (6): course_id, subject, semester, section, Gradebook_Item, Gender
+## dbl (23): student_id, total_points_possible, total_points_earned, percentage...
+## lgl  (1): Grade_Category
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>head(sci_online_classes)</code></pre>
+<pre><code>## # A tibble: 6 × 30
+##   student_id course_id     total_points_possi… total_points_ea… percentage_earn…
+##        &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+## 1      43146 FrScA-S216-02                3280             2220            0.677
+## 2      44638 OcnA-S116-01                 3531             2672            0.757
+## 3      47448 FrScA-S216-01                2870             1897            0.661
+## 4      47979 OcnA-S216-01                 4562             3090            0.677
+## 5      48797 PhysA-S116-01                2207             1910            0.865
+## 6      51943 FrScA-S216-03                4208             3596            0.855
+## # … with 25 more variables: subject &lt;chr&gt;, semester &lt;chr&gt;, section &lt;chr&gt;,
+## #   Gradebook_Item &lt;chr&gt;, Grade_Category &lt;lgl&gt;, FinalGradeCEMS &lt;dbl&gt;,
+## #   Points_Possible &lt;dbl&gt;, Points_Earned &lt;dbl&gt;, Gender &lt;chr&gt;, q1 &lt;dbl&gt;,
+## #   q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;, q5 &lt;dbl&gt;, q6 &lt;dbl&gt;, q7 &lt;dbl&gt;, q8 &lt;dbl&gt;,
+## #   q9 &lt;dbl&gt;, q10 &lt;dbl&gt;, TimeSpent &lt;dbl&gt;, TimeSpent_hours &lt;dbl&gt;,
+## #   TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;, pc &lt;dbl&gt;, uv &lt;dbl&gt;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>In the select-1 code chunk: Use the ‘select’ function to
 <em>select</em> <code>student_id</code>, <code>subject</code>,
 <code>semester</code>, <code>FinalGradeCEMS</code>. <em>Assign</em> to a
 new object with a different name (you choose the name).</li>
 </ol>
-<pre class="r"><code># Type your code here</code></pre>
+<pre class="r"><code># Type your code here
+newsci&lt;-select(sci_online_classes,student_id, subject, semester, FinalGradeCEMS)
+head(newsci)</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##   student_id subject semester FinalGradeCEMS
+##        &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
+## 1      43146 FrScA   S216               93.5
+## 2      44638 OcnA    S116               81.7
+## 3      47448 FrScA   S216               88.5
+## 4      47979 OcnA    S216               81.9
+## 5      48797 PhysA   S116               84  
+## 6      51943 FrScA   S216               NA</code></pre>
 <ul>
 <li></li>
 </ul>
 <p>What do you notice about FinalGradeCEMS?(*Hint: NAs?)</p>
 <ul>
-<li>Answer here</li>
+<li>There are students that do not have a grade available for their
+final grade</li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
 <li>In code chunk named <code>select-2</code> <em>select</em> all
@@ -498,18 +577,46 @@ columns except <code>subject</code> and <code>section</code>.
 <em>Assign</em> to a new object with a different name. <em>Examine</em>
 your data frame with a different <code>function</code>.</li>
 </ol>
-<pre class="r"><code># Type your code here</code></pre>
+<pre class="r"><code># Type your code here
+newsci2&lt;-select(newsci, !subject)
+head(newsci2)</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   student_id semester FinalGradeCEMS
+##        &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;
+## 1      43146 S216               93.5
+## 2      44638 S116               81.7
+## 3      47448 S216               88.5
+## 4      47979 S216               81.9
+## 5      48797 S116               84  
+## 6      51943 S216               NA</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>In the code chunk named <code>filter-1</code>, <em>Filter</em> the
 sci_classes data frame for students in OcnA courses. <em>Assign</em> to
 a new object with a different name. <em>Use</em> the head() function to
 examine your data frame.</li>
 </ol>
-<pre class="r"><code>#Type your code here</code></pre>
+<pre class="r"><code>#Type your code here
+OcnAfil&lt;- filter(sci_online_classes, subject == &quot;OcnA&quot;)
+head(OcnAfil)</code></pre>
+<pre><code>## # A tibble: 6 × 30
+##   student_id course_id    total_points_possib… total_points_ea… percentage_earn…
+##        &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+## 1      44638 OcnA-S116-01                 3531             2672            0.757
+## 2      47979 OcnA-S216-01                 4562             3090            0.677
+## 3      54066 OcnA-S116-01                 4641             3429            0.739
+## 4      54282 OcnA-S116-02                 3581             2777            0.775
+## 5      54342 OcnA-S116-02                 3256             2876            0.883
+## 6      54346 OcnA-S116-01                 4471             3773            0.844
+## # … with 25 more variables: subject &lt;chr&gt;, semester &lt;chr&gt;, section &lt;chr&gt;,
+## #   Gradebook_Item &lt;chr&gt;, Grade_Category &lt;lgl&gt;, FinalGradeCEMS &lt;dbl&gt;,
+## #   Points_Possible &lt;dbl&gt;, Points_Earned &lt;dbl&gt;, Gender &lt;chr&gt;, q1 &lt;dbl&gt;,
+## #   q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;, q5 &lt;dbl&gt;, q6 &lt;dbl&gt;, q7 &lt;dbl&gt;, q8 &lt;dbl&gt;,
+## #   q9 &lt;dbl&gt;, q10 &lt;dbl&gt;, TimeSpent &lt;dbl&gt;, TimeSpent_hours &lt;dbl&gt;,
+## #   TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;, pc &lt;dbl&gt;, uv &lt;dbl&gt;</code></pre>
 <p>Q: How many rows does the head() function display? <em>Hint: Check
 the dimensions of your tibble in the console.</em></p>
 <ul>
-<li>Answer here</li>
+<li>Head shows the first 6 rows of data</li>
 </ul>
 <ol start="7" style="list-style-type: decimal">
 <li>In code chunk named <code>filter-2</code>, <em>filter</em> the
@@ -517,16 +624,31 @@ sci_classes data frame so rows with NA for points earned are removed.
 <em>Assign</em> to a new object with a different name. <em>Use</em>
 glimpse() to examine all columns of your data frame.</li>
 </ol>
-<pre class="r"><code># Type your code here</code></pre>
+<pre class="r"><code># Type your code here
+newsciclean&lt;- na.omit(newsci)
+head(newsciclean)</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##   student_id subject semester FinalGradeCEMS
+##        &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
+## 1      43146 FrScA   S216               93.5
+## 2      44638 OcnA    S116               81.7
+## 3      47448 FrScA   S216               88.5
+## 4      47979 OcnA    S216               81.9
+## 5      48797 PhysA   S116               84  
+## 6      52326 AnPhA   S216               83.6</code></pre>
 <ol start="8" style="list-style-type: decimal">
-<li><p>In the code chunk called <code>arrange-1</code>, <em>Arrange</em>
+<li>In the code chunk called <code>arrange-1</code>, <em>Arrange</em>
 <code>sci_classes</code> by <code>subject</code> then
 <code>percentage_earned</code> in descending order. <em>Assign</em> to a
 new object. <em>Use</em> the str() function to examine the data type of
-each column in your data frame.</p></li>
-<li><p>In the code chunk name <code>final-wrangle</code>, <em>use</em>
+each column in your data frame.</li>
+</ol>
+<pre class="r"><code>newsciarr&lt;-arrange(sci_online_classes, subject, desc(percentage_earned))
+view(newsciarr)</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>In the code chunk name <code>final-wrangle</code>, <em>use</em>
 <code>sci_classes</code> data and the %&gt;% <code>pipe</code>
-operator:</p></li>
+operator:</li>
 </ol>
 <ul>
 <li>Select <code>student_id</code>, <code>subject</code>,
@@ -536,7 +658,19 @@ operator:</p></li>
 <li>Assign to a new object.</li>
 <li>Examine the contents using a method of your choosing.</li>
 </ul>
-<pre class="r"><code>#Type your code here</code></pre>
+<pre class="r"><code>#Type your code here
+
+scisep&lt;-sci_online_classes|&gt;
+    separate(course_id,
+           c(&quot;subject&quot;, &quot;semester&quot;, &quot;section&quot;))
+
+finalwrangle&lt;-scisep|&gt;
+    select(student_id, subject, semester, section, FinalGradeCEMS)|&gt;
+    filter(subject == &quot;OcnA&quot;)|&gt;
+    arrange(desc(FinalGradeCEMS))
+    view(finalwrangle)
+
+##Sorting </code></pre>
 <div id="knit-submit" class="section level3">
 <h3>Knit &amp; Submit</h3>
 <p>Congratulations, you’ve completed your Foundation Badge on Learning

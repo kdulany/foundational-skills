@@ -123,7 +123,7 @@ this analysis:
 
 ```{r}
 #load with read_csv package
-time_spent <- read_csv("~/RProj22/foundation_labs_2022/foundation_lab_2/data/log-data.csv")
+time_spent <- read_csv("data/log-data.csv")
 ```
 
 Now let's load it with the {here} package.
@@ -164,7 +164,7 @@ and utility value).
 survey <- read_csv(here("data", "survey.csv"))
 
 #inspect data with view - yes the "V" is capitalized
-View(survey)
+head(survey)
 ```
 
 ### b. Tidy data
@@ -252,7 +252,8 @@ data_to_explore \<- full_join(joined_data, survey, by = c("student_id",
 
 ```{r eval = FALSE}
 # add a join with joined data and survey
-
+data_to_explore <- full_join(joined_data, survey, by = c("student_id",
+"subject", "section"))
 
 ```
 
