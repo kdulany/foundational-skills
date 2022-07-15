@@ -82,14 +82,19 @@ Exercise 1:
 ```{r, data-viz1}
 library(tidyverse)
 library(here)
+library(readr)
+library(ggplot2)
 
 sci_classes <- read_csv("data/sci-online-classes.csv")
 head(sci_classes)
 
 sci_classes |> 
   select(c('subject', 'Gender', 'percentage_earned', 'TimeSpent_hours')) |>
-  filter(subject == "OcnA" | subject == "PhysA") |>
-  skim()
+  filter(subject == "OcnA" | subject == "PhysA")
+
+<-ggplot(sci_classes, aes(x=as.factor(percentage_earned), y=Gender)) + 
+    geom_boxplot(fill="slateblue", alpha=0.2) + 
+    xlab("percentage_earned")
 
 
 ggplot(sci_classes, 
@@ -116,6 +121,8 @@ Exercise 2:
 
 ```{r, data-viz2}
 # YOUR FINAL CODE HERE
+
+
 
 ```
 
