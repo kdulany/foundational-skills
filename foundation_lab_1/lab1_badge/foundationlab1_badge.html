@@ -9,9 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Jeanne McClure" />
+<meta name="author" content="Krista Dulany" />
 
-<meta name="date" content="2022-07-11" />
+<meta name="date" content="2022-07-15" />
 
 <title>Data Sources badge</title>
 
@@ -365,8 +365,8 @@ pre code {
 
 <h1 class="title toc-ignore">Data Sources badge</h1>
 <h3 class="subtitle">LASER Institute Foundation Learning Lab 1</h3>
-<h4 class="author">Jeanne McClure</h4>
-<h4 class="date">July 11, 2022</h4>
+<h4 class="author">Krista Dulany</h4>
+<h4 class="date">July 15, 2022</h4>
 
 </div>
 
@@ -396,27 +396,37 @@ welcome to select one of your research papers.</p>
 <ol style="list-style-type: decimal">
 <li><p>Provide an APA citation for your selected study.</p>
 <ul>
-<li></li>
+<li>Campos, F. C., Ahn, J., DiGiacomo, D. K., Nguyen, H., &amp; Hays, M.
+(2021). Making sense of sensemaking: Understanding how K–12 teachers and
+coaches react to visual analytics. Journal of Learning Analytics, 8(3),
+60–80. <a href="https://doi.org/10.18608/jla.2021.7113" class="uri">https://doi.org/10.18608/jla.2021.7113</a></li>
 </ul></li>
 <li><p>What types of data are associated with LA ?</p>
 <ul>
-<li></li>
+<li>survey data, interview data, numerical data, text data,</li>
 </ul></li>
 <li><p>What type of data structures are analyzed in the educational
 context?</p>
 <ul>
-<li></li>
+<li>PMs are collected through student-facing surveys, think aloud
+sessions, semi-structures interviews with teachers and coaches. Data
+visuals of student graphs for teachers and coaches</li>
 </ul></li>
 <li><p>How might this article be used to better understand a dataset or
 educational context of personal or professional interest to you?</p>
 <ul>
-<li></li>
+<li>They worked with teachers and coaches to understand to support
+sensemaking of learning analytics data. It is important to acknowledge
+that teachers may not know how to process or use the data they are
+given. This makes me think of how strategic professional development and
+coaching can support utilizing these tools.</li>
 </ul></li>
 <li><p>Finally, how do these processes compare with what teachers and
 educational organizations already do to support and assess student
 learning?</p>
 <ul>
-<li></li>
+<li>LA Process Model - Instructional Event, Data Representation,
+Awareness, Reflection &amp; Insight, Pedagogical Action</li>
 </ul></li>
 </ol>
 <p>Draft a research question of guided by techniques and data sources
@@ -424,22 +434,29 @@ that you are potentially interested in exploring in more depth.</p>
 <ol style="list-style-type: decimal">
 <li><p>What data source(s) should be analyzed or discussed?</p>
 <ul>
-<li></li>
+<li>Teacher responses to professional development overall. Progression
+of concept understanding before and after PD, then after coaching.
+Responses to pedagogy used in PD and if it is transferable to
+classroom.</li>
 </ul></li>
 <li><p>What is the purpose of your article?</p>
 <ul>
-<li></li>
+<li>To inform PD pedagogy and topics in PD sessions, Track understanding
+of concepts across sessions.</li>
 </ul></li>
 <li><p>Explain the analytical level at which these data would need to be
 collected and analyzed.</p>
 <ul>
-<li></li>
+<li>survey responses and interviews with teachers attending PD
+series</li>
 </ul></li>
 <li><p>How, if at all, will your article touch upon the application(s)
 of LA to “understand and improve learning and the contexts in which
 learning occurs?”</p>
 <ul>
-<li></li>
+<li>LA will help use develop better PD and we can also develop PD to
+share grater understanding of LA data outputs. We can also see if we are
+building conceptual understanding.</li>
 </ul></li>
 </ol>
 </div>
@@ -448,11 +465,129 @@ learning occurs?”</p>
 <p>After you finish the script file for <a href="https://github.com/laser-institute/foundational-skills/tree/master/foundation_lab_1/lab1_badge">lab1_badge</a>
 add the code fo reach problem into the correct code chunks below. #
 Making sure not to change the code chunk name.</p>
-<pre class="r"><code># YOUR FINAL CODE HERE</code></pre>
-<pre class="r"><code># YOUR FINAL CODE HERE</code></pre>
-<pre class="r"><code># YOUR FINAL CODE HERE</code></pre>
-<pre class="r"><code># YOUR FINAL CODE HERE</code></pre>
-<pre class="r"><code># YOUR FINAL CODE HERE</code></pre>
+<pre class="r"><code># YOUR FINAL CODE HERE
+Students &lt;- c(&quot;Thor&quot;, &quot;Rogue&quot;, &quot;Electra&quot;, &quot;Electra&quot;, &quot;Wolverine&quot;)
+Foods &lt;- c(&quot;Bread&quot;, &quot;Orange&quot;, &quot;Chocolate&quot;, &quot;Carrots&quot;, &quot;Milk&quot;)
+
+data&lt;-data.frame(Students, Foods)
+data</code></pre>
+<pre><code>##    Students     Foods
+## 1      Thor     Bread
+## 2     Rogue    Orange
+## 3   Electra Chocolate
+## 4   Electra   Carrots
+## 5 Wolverine      Milk</code></pre>
+<pre class="r"><code># YOUR FINAL CODE HERE
+data_table&lt;-table(Students)
+data_table</code></pre>
+<pre><code>## Students
+##   Electra     Rogue      Thor Wolverine 
+##         2         1         1         1</code></pre>
+<pre class="r"><code># YOUR FINAL CODE HERE
+num&lt;- c(2,3,7,9,10)
+numsum&lt;-sum(num)
+numsum</code></pre>
+<pre><code>## [1] 31</code></pre>
+<pre class="r"><code># YOUR FINAL CODE HERE
+library(readr)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.3.6     ✔ dplyr   1.0.9
+## ✔ tibble  3.1.7     ✔ stringr 1.4.0
+## ✔ tidyr   1.2.0     ✔ forcats 0.5.1
+## ✔ purrr   0.3.4</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(here)</code></pre>
+<pre><code>## here() starts at /Users/kristadulany/Documents/GitHub/foundational-skills/foundation_lab_1</code></pre>
+<pre class="r"><code>sci_classes&lt;- read_csv(here(&quot;data/sci-online-classes.csv&quot;))</code></pre>
+<pre><code>## Rows: 603 Columns: 30</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (6): course_id, subject, semester, section, Gradebook_Item, Gender
+## dbl (23): student_id, total_points_possible, total_points_earned, percentage...
+## lgl  (1): Grade_Category
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>sci_classes</code></pre>
+<pre><code>## # A tibble: 603 × 30
+##    student_id course_id     total_points_poss… total_points_ea… percentage_earn…
+##         &lt;dbl&gt; &lt;chr&gt;                      &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1      43146 FrScA-S216-02               3280             2220            0.677
+##  2      44638 OcnA-S116-01                3531             2672            0.757
+##  3      47448 FrScA-S216-01               2870             1897            0.661
+##  4      47979 OcnA-S216-01                4562             3090            0.677
+##  5      48797 PhysA-S116-01               2207             1910            0.865
+##  6      51943 FrScA-S216-03               4208             3596            0.855
+##  7      52326 AnPhA-S216-01               4325             2255            0.521
+##  8      52446 PhysA-S116-01               2086             1719            0.824
+##  9      53447 FrScA-S116-01               4655             3149            0.676
+## 10      53475 FrScA-S116-02               1710             1402            0.820
+## # … with 593 more rows, and 25 more variables: subject &lt;chr&gt;, semester &lt;chr&gt;,
+## #   section &lt;chr&gt;, Gradebook_Item &lt;chr&gt;, Grade_Category &lt;lgl&gt;,
+## #   FinalGradeCEMS &lt;dbl&gt;, Points_Possible &lt;dbl&gt;, Points_Earned &lt;dbl&gt;,
+## #   Gender &lt;chr&gt;, q1 &lt;dbl&gt;, q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;, q5 &lt;dbl&gt;, q6 &lt;dbl&gt;,
+## #   q7 &lt;dbl&gt;, q8 &lt;dbl&gt;, q9 &lt;dbl&gt;, q10 &lt;dbl&gt;, TimeSpent &lt;dbl&gt;,
+## #   TimeSpent_hours &lt;dbl&gt;, TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;, pc &lt;dbl&gt;, uv &lt;dbl&gt;</code></pre>
+<pre class="r"><code>#A tibble: 603 X 30
+
+head(sci_classes)</code></pre>
+<pre><code>## # A tibble: 6 × 30
+##   student_id course_id     total_points_possi… total_points_ea… percentage_earn…
+##        &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+## 1      43146 FrScA-S216-02                3280             2220            0.677
+## 2      44638 OcnA-S116-01                 3531             2672            0.757
+## 3      47448 FrScA-S216-01                2870             1897            0.661
+## 4      47979 OcnA-S216-01                 4562             3090            0.677
+## 5      48797 PhysA-S116-01                2207             1910            0.865
+## 6      51943 FrScA-S216-03                4208             3596            0.855
+## # … with 25 more variables: subject &lt;chr&gt;, semester &lt;chr&gt;, section &lt;chr&gt;,
+## #   Gradebook_Item &lt;chr&gt;, Grade_Category &lt;lgl&gt;, FinalGradeCEMS &lt;dbl&gt;,
+## #   Points_Possible &lt;dbl&gt;, Points_Earned &lt;dbl&gt;, Gender &lt;chr&gt;, q1 &lt;dbl&gt;,
+## #   q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;, q5 &lt;dbl&gt;, q6 &lt;dbl&gt;, q7 &lt;dbl&gt;, q8 &lt;dbl&gt;,
+## #   q9 &lt;dbl&gt;, q10 &lt;dbl&gt;, TimeSpent &lt;dbl&gt;, TimeSpent_hours &lt;dbl&gt;,
+## #   TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;, pc &lt;dbl&gt;, uv &lt;dbl&gt;</code></pre>
+<pre class="r"><code>#A tibble: 6 X 30</code></pre>
+<pre class="r"><code># YOUR FINAL CODE HERE
+sci_select&lt;- select(sci_classes, -subject, -section)
+sci_select</code></pre>
+<pre><code>## # A tibble: 603 × 28
+##    student_id course_id     total_points_poss… total_points_ea… percentage_earn…
+##         &lt;dbl&gt; &lt;chr&gt;                      &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1      43146 FrScA-S216-02               3280             2220            0.677
+##  2      44638 OcnA-S116-01                3531             2672            0.757
+##  3      47448 FrScA-S216-01               2870             1897            0.661
+##  4      47979 OcnA-S216-01                4562             3090            0.677
+##  5      48797 PhysA-S116-01               2207             1910            0.865
+##  6      51943 FrScA-S216-03               4208             3596            0.855
+##  7      52326 AnPhA-S216-01               4325             2255            0.521
+##  8      52446 PhysA-S116-01               2086             1719            0.824
+##  9      53447 FrScA-S116-01               4655             3149            0.676
+## 10      53475 FrScA-S116-02               1710             1402            0.820
+## # … with 593 more rows, and 23 more variables: semester &lt;chr&gt;,
+## #   Gradebook_Item &lt;chr&gt;, Grade_Category &lt;lgl&gt;, FinalGradeCEMS &lt;dbl&gt;,
+## #   Points_Possible &lt;dbl&gt;, Points_Earned &lt;dbl&gt;, Gender &lt;chr&gt;, q1 &lt;dbl&gt;,
+## #   q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;, q5 &lt;dbl&gt;, q6 &lt;dbl&gt;, q7 &lt;dbl&gt;, q8 &lt;dbl&gt;,
+## #   q9 &lt;dbl&gt;, q10 &lt;dbl&gt;, TimeSpent &lt;dbl&gt;, TimeSpent_hours &lt;dbl&gt;,
+## #   TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;, pc &lt;dbl&gt;, uv &lt;dbl&gt;</code></pre>
+<pre class="r"><code>head(sci_select)</code></pre>
+<pre><code>## # A tibble: 6 × 28
+##   student_id course_id     total_points_possi… total_points_ea… percentage_earn…
+##        &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+## 1      43146 FrScA-S216-02                3280             2220            0.677
+## 2      44638 OcnA-S116-01                 3531             2672            0.757
+## 3      47448 FrScA-S216-01                2870             1897            0.661
+## 4      47979 OcnA-S216-01                 4562             3090            0.677
+## 5      48797 PhysA-S116-01                2207             1910            0.865
+## 6      51943 FrScA-S216-03                4208             3596            0.855
+## # … with 23 more variables: semester &lt;chr&gt;, Gradebook_Item &lt;chr&gt;,
+## #   Grade_Category &lt;lgl&gt;, FinalGradeCEMS &lt;dbl&gt;, Points_Possible &lt;dbl&gt;,
+## #   Points_Earned &lt;dbl&gt;, Gender &lt;chr&gt;, q1 &lt;dbl&gt;, q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;,
+## #   q5 &lt;dbl&gt;, q6 &lt;dbl&gt;, q7 &lt;dbl&gt;, q8 &lt;dbl&gt;, q9 &lt;dbl&gt;, q10 &lt;dbl&gt;,
+## #   TimeSpent &lt;dbl&gt;, TimeSpent_hours &lt;dbl&gt;, TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;,
+## #   pc &lt;dbl&gt;, uv &lt;dbl&gt;</code></pre>
 </div>
 <div id="knit-submit" class="section level3">
 <h3>Knit &amp; Submit</h3>

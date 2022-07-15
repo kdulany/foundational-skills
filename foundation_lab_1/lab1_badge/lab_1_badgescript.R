@@ -14,9 +14,11 @@
 
 
 #### Write your code below:
+Students <- c("Thor", "Rogue", "Electra", "Electra", "Wolverine")
+Foods <- c("Bread", "Orange", "Chocolate", "Carrots", "Milk")
 
-
-
+data<-data.frame(Students, Foods)
+data
 
 ################
 ## Problem 2 ###
@@ -24,8 +26,8 @@
 
 # Using the data frame created in Problem 2, use the table() command to create a frequency table for the column called "Students".
 
-
-
+data_table<-table(Students)
+data_table
 
 ################
 ## Problem 3 ###
@@ -35,6 +37,9 @@
 
 
 #### Write your code below:
+num<- c(2,3,7,9,10)
+numsum<-sum(num)
+numsum
 
 
 
@@ -52,8 +57,14 @@
 
 #### Write your code below:
 
+library(readr)
+library(tidyverse)
+sci_classes<- read_csv("data/sci-online-classes.csv")
+sci_classes
+#A tibble: 603 X 30
 
-
+head(sci_classes)
+#A tibble: 6 X 30
 
 
 
@@ -70,8 +81,9 @@
 
 
 #### Write your code below:
-
-
+sci_select<- select(sci_classes, -subject, -section)
+sci_select
+head(sci_select)
 
 
 ##################

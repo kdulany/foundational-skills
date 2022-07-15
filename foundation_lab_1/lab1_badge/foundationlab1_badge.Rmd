@@ -1,7 +1,7 @@
 ---
 title: 'Data Sources badge'
 subtitle: "LASER Institute Foundation Learning Lab 1"
-author: "Jeanne McClure"
+author: "Krista Dulany"
 date: "`r format(Sys.Date(),'%B %e, %Y')`"
 output: html_document
 ---
@@ -30,37 +30,37 @@ Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#art
 
 2.  What types of data are associated with LA ?
 
-    -   
+    -   survey data, interview data, numerical data, text data,
 
 3.  What type of data structures are analyzed in the educational context?
 
-    -   
+    -   PMs are collected through student-facing surveys, think aloud sessions, semi-structures interviews with teachers and coaches. Data visuals of student graphs for teachers and coaches
 
 4.  How might this article be used to better understand a dataset or educational context of personal or professional interest to you?
 
-    -   
+    -   They worked with teachers and coaches to understand to support sensemaking of learning analytics data. It is important to acknowledge that teachers may not know how to process or use the data they are given. This makes me think of how strategic professional development and coaching can support utilizing these tools.
 
 5.  Finally, how do these processes compare with what teachers and educational organizations already do to support and assess student learning?
 
-    -   
+    -   LA Process Model - Instructional Event, Data Representation, Awareness, Reflection & Insight, Pedagogical Action
 
 Draft a research question of guided by techniques and data sources that you are potentially interested in exploring in more depth.
 
 1.  What data source(s) should be analyzed or discussed?
 
-    -   
+    -   Teacher responses to professional development overall. Progression of concept understanding before and after PD, then after coaching. Responses to pedagogy used in PD and if it is transferable to classroom.
 
 2.  What is the purpose of your article?
 
-    -   
+    -   To inform PD pedagogy and topics in PD sessions, Track understanding of concepts across sessions.
 
 3.  Explain the analytical level at which these data would need to be collected and analyzed.
 
-    -   
+    -   survey responses and interviews with teachers attending PD series
 
 4.  How, if at all, will your article touch upon the application(s) of LA to "understand and improve learning and the contexts in which learning occurs?"
 
-    -   
+    -   LA will help use develop better PD and we can also develop PD to share grater understanding of LA data outputs. We can also see if we are building conceptual understanding.
 
 ### Part II: Data Product
 
@@ -68,30 +68,49 @@ After you finish the script file for [lab1_badge](https://github.com/laser-insti
 
 ```{r, problem_1}
 # YOUR FINAL CODE HERE
+Students <- c("Thor", "Rogue", "Electra", "Electra", "Wolverine")
+Foods <- c("Bread", "Orange", "Chocolate", "Carrots", "Milk")
 
+data<-data.frame(Students, Foods)
+data
 
 ```
 
 ```{r, problem_2}
 # YOUR FINAL CODE HERE
-
+data_table<-table(Students)
+data_table
 
 ```
 
 ```{r, problem_3}
 # YOUR FINAL CODE HERE
-
+num<- c(2,3,7,9,10)
+numsum<-sum(num)
+numsum
 
 ```
 
 ```{r, problem_4}
 # YOUR FINAL CODE HERE
+library(readr)
+library(tidyverse)
+library(here)
 
+sci_classes<- read_csv(here("data/sci-online-classes.csv"))
+sci_classes
+#A tibble: 603 X 30
+
+head(sci_classes)
+#A tibble: 6 X 30
 
 ```
 
 ```{r, problem_5}
 # YOUR FINAL CODE HERE
+sci_select<- select(sci_classes, -subject, -section)
+sci_select
+head(sci_select)
 
 
 ```
